@@ -66,9 +66,29 @@ public class Tabuleiro {
     }
     
     
-    public void verificarGanhador(char simbolo){
-        
-}
+    public void verificarGanhador(char simbolo){ 
+      if (a3 == simbolo && b2 == simbolo && c1 == simbolo) {
+        System.out.println("Ganhador!");
+      } else if (a1 == simbolo && b1 == simbolo && c1 == simbolo) {
+        System.out.println("Ganhador!");
+         } else if (a2 == simbolo && b2 == simbolo && c2 == simbolo) {
+        System.out.println("Ganhador!");
+     } else if (a3 == simbolo && b3 == simbolo && c3 == simbolo) {
+        System.out.println("Ganhador!");
+    } else if (a1 == simbolo && b2 == simbolo && c3 == simbolo) {
+        System.out.println("Ganhador!");
+    } else if (c1 == simbolo && c2 == simbolo && c3 == simbolo) {
+        System.out.println("Ganhador!");
+    } else if (a1 == simbolo && a2 == simbolo && a3 == simbolo) {
+        System.out.println("Ganhador!");
+    } else if (b1 == simbolo && b2 == simbolo && b3 == simbolo) {
+        System.out.println("Ganhador!");
+    } else {
+        System.out.println("Ainda não há ganhador.");
+    }
+}   
+
+     
     public void organizar(){
         
     }
@@ -87,7 +107,7 @@ public class Tabuleiro {
                        -------+-------+-------
                               |       |
                               |       |       
-                   3    %c      |  %c     |   %c  
+                   3      %c    |  %c     |   %c  
                               |       |
                               |       |       
                        
