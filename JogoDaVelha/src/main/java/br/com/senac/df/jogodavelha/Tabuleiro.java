@@ -66,26 +66,27 @@ public class Tabuleiro {
     }
     
     
-    public void verificarGanhador(char simbolo){ 
+    public void verificarGanhador(char simbolo, String nome){ 
       if (a3 == simbolo && b2 == simbolo && c1 == simbolo) {
-        System.out.println("Ganhador!");
+      this.houveGanhadorUltimaRodada = true;
       } else if (a1 == simbolo && b1 == simbolo && c1 == simbolo) {
-        System.out.println("Ganhador!");
+       this.houveGanhadorUltimaRodada = true;
          } else if (a2 == simbolo && b2 == simbolo && c2 == simbolo) {
-        System.out.println("Ganhador!");
+       this.houveGanhadorUltimaRodada = true;
      } else if (a3 == simbolo && b3 == simbolo && c3 == simbolo) {
-        System.out.println("Ganhador!");
+       this.houveGanhadorUltimaRodada = true;
     } else if (a1 == simbolo && b2 == simbolo && c3 == simbolo) {
-        System.out.println("Ganhador!");
+        this.houveGanhadorUltimaRodada = true;
     } else if (c1 == simbolo && c2 == simbolo && c3 == simbolo) {
-        System.out.println("Ganhador!");
+        this.houveGanhadorUltimaRodada = true;
     } else if (a1 == simbolo && a2 == simbolo && a3 == simbolo) {
-        System.out.println("Ganhador!");
+       this.houveGanhadorUltimaRodada = true;
     } else if (b1 == simbolo && b2 == simbolo && b3 == simbolo) {
-        System.out.println("Ganhador!");
-    } else {
-        System.out.println("Ainda não há ganhador.");
+        this.houveGanhadorUltimaRodada = true;
     }
+  if (this.houveGanhadorUltimaRodada == true){
+      System.out.println("parabens, ganhador(a): " + nome);
+  }
 }   
 
      
@@ -148,6 +149,42 @@ public class Tabuleiro {
          break;
          
          case"C3":
+         this.c3 = simbolo;
+         break;
+         
+         case "a1":
+             this.a1 = simbolo;
+             break;
+             
+         case "a2":
+         this.a2 = simbolo;
+         break;
+         
+         case"a3":
+         this.a3 = simbolo;
+         break;
+         
+         case "b1":
+         this.b1 = simbolo;
+         break;
+         
+         case"b2":
+         this.b2 = simbolo;
+         break;
+         
+         case"b3":
+         this.b3 = simbolo;
+         break;
+         
+         case"c1":
+         this.c1 = simbolo;
+         break;
+         
+         case"c2":
+         this.c2 = simbolo;
+         break;
+         
+         case"c3":
          this.c3 = simbolo;
          break;
      }
